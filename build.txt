@@ -1,0 +1,3 @@
+displayName = Official Storytime Mod
+author = Isengriff
+version = 0.2

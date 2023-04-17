@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yXJBaQ6HUGFb9VDGIyFbBElXd8g0yHRiIrF+BEHUVjDwrLEXBniUbEoGyk7DiwQ5H1EyK/5PldJU9if/H1U1lQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\minmi\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\storytimeModOfficial\\storytimeModOfficial.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\minmi\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
