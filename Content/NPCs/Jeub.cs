@@ -18,6 +18,7 @@ using ReLogic.Content;
 using Terraria.ModLoader.IO;
 using storytimeModOfficial.Content.Items;
 using storytimeModOfficial.Content.Items.Placeable;
+using storytimeModOfficial.Content.Items.Placeable.Furniture;
 
 namespace storytimeModOfficial.Content.NPCs
 {
@@ -137,7 +138,17 @@ namespace storytimeModOfficial.Content.NPCs
 				"Jeub",
 				"Jeubadiah",
 				"Jeubert",
-				"Jeeb"
+				"Jeeb",
+				"Snaff",
+				"Tony",
+				"Jeubon",
+				"Jeubos",
+				"Jeubsiah",
+				"Jeubilliam",
+				"Phlunt",
+				"Jeubo",
+				"Jeubrick",
+				"Jeubion"
 			};
 		}
 
@@ -188,10 +199,21 @@ namespace storytimeModOfficial.Content.NPCs
 		}
 		public override void SetupShop(Chest shop, ref int nextSlot)
 		{
+			shop.item[nextSlot].SetDefaults(ItemID.StoneBlock);
+			shop.item[nextSlot].shopCustomPrice = 2;
+			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
+			nextSlot++;
+
 			shop.item[nextSlot].SetDefaults(ModContent.ItemType<MaoBoxItem>());
 			shop.item[nextSlot].shopCustomPrice = 300;
 			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
 			nextSlot++;
+
+			shop.item[nextSlot].SetDefaults(ModContent.ItemType<BusinessCasualItem>());
+			shop.item[nextSlot].shopCustomPrice = 150;
+			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
+			nextSlot++;
+
 		}
 
 		public override void ModifyNPCLoot(NPCLoot npcLoot)
