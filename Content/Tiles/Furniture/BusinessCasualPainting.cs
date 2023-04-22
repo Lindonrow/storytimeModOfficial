@@ -21,7 +21,7 @@ namespace storytimeModOfficial.Content.Tiles.Furniture
 			TileObjectData.addTile(Type);
 
 			AddMapEntry(new Color(120, 85, 60), Language.GetText("MapObject.Painting"));
-			DustType = 7;
+			DustType = 0;
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)

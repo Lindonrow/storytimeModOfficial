@@ -219,6 +219,11 @@ namespace storytimeModOfficial.Content.NPCs
 			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
 			nextSlot++;
 
+			shop.item[nextSlot].SetDefaults(ModContent.ItemType<AggressiveLaughterItem>());
+			shop.item[nextSlot].shopCustomPrice = 75;
+			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
+			nextSlot++;
+
 		}
 
 		public override void ModifyNPCLoot(NPCLoot npcLoot)
