@@ -205,12 +205,17 @@ namespace storytimeModOfficial.Content.NPCs
 			nextSlot++;
 
 			shop.item[nextSlot].SetDefaults(ModContent.ItemType<MaoBoxItem>());
-			shop.item[nextSlot].shopCustomPrice = 300;
+			shop.item[nextSlot].shopCustomPrice = 750;
 			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
 			nextSlot++;
 
 			shop.item[nextSlot].SetDefaults(ModContent.ItemType<BusinessCasualItem>());
-			shop.item[nextSlot].shopCustomPrice = 150;
+			shop.item[nextSlot].shopCustomPrice = 200;
+			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
+			nextSlot++;
+
+			shop.item[nextSlot].SetDefaults(ModContent.ItemType<ZhangFeiItem>());
+			shop.item[nextSlot].shopCustomPrice = 200;
 			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
 			nextSlot++;
 

@@ -15,8 +15,8 @@ namespace storytimeModOfficial.Content.Items
         }
         public override void SetDefaults()
         {
-            Item.width = 16;
-            Item.height = 16;
+            Item.width = 12;
+            Item.height = 12;
 
             Item.value = Item.buyPrice(copper: 1);
             Item.maxStack = 999;

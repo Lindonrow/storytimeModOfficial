@@ -20,7 +20,7 @@ namespace storytimeModOfficial.Content.Tiles.Furniture
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
 			TileObjectData.addTile(Type);
 
-			AddMapEntry(new Color(120, 85, 60), Language.GetText("MapObject.Trophy"));
+			AddMapEntry(new Color(120, 85, 60), Language.GetText("MapObject.Painting"));
 			DustType = 7;
 		}
 
