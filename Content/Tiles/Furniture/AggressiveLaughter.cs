@@ -15,6 +15,7 @@ namespace storytimeModOfficial.Content.Tiles.Furniture
 		{
             Main.tileFrameImportant[(int)((ModBlockType)this).Type] = true;
             Main.tileLavaDeath[(int)((ModBlockType)this).Type] = true;
+            TileID.Sets.FramesOnKillWall[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
             TileObjectData.newTile.Width = 2;
             TileObjectData.newTile.Height = 2;

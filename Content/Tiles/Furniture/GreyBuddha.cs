@@ -2,24 +2,25 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.Enums;
+using Terraria.GameContent;
+using Terraria.GameContent.ObjectInteractions;
+using Terraria.Localization;
+
 
 namespace storytimeModOfficial.Content.Tiles.Furniture
 {
-	// Simple 3x3 tile that can be placed on a wall
-	public class ZhangFeiPainting : ModTile
+	public class GreyBuddha : ModTile
 	{
 		public override void SetStaticDefaults()
-		{
+        {
             Main.tileFrameImportant[(int)((ModBlockType)this).Type] = true;
             Main.tileLavaDeath[(int)((ModBlockType)this).Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Width = 6;
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x4);
+            TileObjectData.newTile.Width = 4;
             TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.Origin = new Point16(3, 3);
             TileObjectData.newTile.CoordinateHeights = new int[6]
             {
         16,
@@ -34,13 +35,19 @@ namespace storytimeModOfficial.Content.Tiles.Furniture
             TileObjectData.addTile((int)((ModBlockType)this).Type);
             ((ModBlockType)this).DustType = 0;
             ModTranslation mapEntryName = ((ModBlockType)this).CreateMapEntryName((string)null);
-            mapEntryName.SetDefault("Painting");
+            mapEntryName.SetDefault("Grey Buddha Statue");
             TileID.Sets.DisableSmartCursor[(int)((ModBlockType)this).Type] = true;
         }
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
+        public override void NumDust(int x, int y, bool fail, ref int num)
 		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Items.Placeable.Furniture.ZhangFeiItem>());
+			num = fail ? 1 : 3;
+		}
+
+		public override void KillMultiTile(int x, int y, int frameX, int frameY)
+		{
+			Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, ModContent.ItemType<Items.Placeable.Furniture.GreyBuddhaItem>());
 		}
 	}
 }
+
