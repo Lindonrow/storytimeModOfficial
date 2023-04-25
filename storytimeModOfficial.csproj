@@ -14,5 +14,6 @@
     <Folder Include="Assets\Sounds\" />
     <Folder Include="Assets\Music\" />
     <Folder Include="Content\Items\Weapons\" />
+    <Folder Include="Menu\" />
   </ItemGroup>
 </Project>
