@@ -209,6 +209,11 @@ namespace storytimeModOfficial.Content.NPCs
 			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
 			nextSlot++;
 
+			shop.item[nextSlot].SetDefaults(ModContent.ItemType<UlDahBoxItem>());
+			shop.item[nextSlot].shopCustomPrice = 750;
+			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
+			nextSlot++;
+
 			shop.item[nextSlot].SetDefaults(ModContent.ItemType<BusinessCasualItem>());
 			shop.item[nextSlot].shopCustomPrice = 200;
 			shop.item[nextSlot].shopSpecialCurrency = storytimeModOfficial.PebbleCurrencyId;
