@@ -1,14 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using storytimeModOfficial.Content.Items.Placeable;
-using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace storytimeModOfficial.Content.Tiles
 {
-	public class UlDahBox : ModTile
+	public class YuleTownBox : ModTile
 	{
 		public override void SetStaticDefaults()
 		{
@@ -27,7 +26,7 @@ namespace storytimeModOfficial.Content.Tiles
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48, ModContent.ItemType<UlDahBoxItem>());
+			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48, ModContent.ItemType<YuleTownBoxItem>());
 		}
 
 		public override void MouseOver(int i, int j)
@@ -35,7 +34,7 @@ namespace storytimeModOfficial.Content.Tiles
 			Player player = Main.LocalPlayer;
 			player.noThrow = 2;
 			player.cursorItemIconEnabled = true;
-			player.cursorItemIconID = ModContent.ItemType<UlDahBoxItem>();
+			player.cursorItemIconID = ModContent.ItemType<YuleTownBoxItem>();
 		}
 	}
 }
